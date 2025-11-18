@@ -7,33 +7,33 @@ Minimal bare-metal project targeting STM32F410 (Nucleo-style) that includes:
 - device headers for STM32F410 ([device/stm32f410tx.h](device/stm32f410tx.h), [device/stm32f410rx.h](device/stm32f410rx.h))
 - linker script and startup ([STM32F410RBTX_FLASH.ld](STM32F410RBTX_FLASH.ld), [startup/startup_stm32f410rbtx.s](startup/startup_stm32f410rbtx.s))
 
-Purpose
+## Purpose
 - Provide a small, portable reference I2C implementation and example to run on STM32F4-family Cortex-M4 devices.
 
-Quick start
+## Quick start
 
-Requirements
+### Requirements
 - arm-none-eabi toolchain (gcc, objcopy)
 - stlink / st-flash (for flashing)
 
-Build
+### Build
 - Build the firmware (uses the included [makefile](makefile)):
 ```sh
 make build
 ```
 
-Debug build (includes debug symbols):
+### Debug build (includes debug symbols):
 ```sh
 make debug
 ```
 
-Flash
+### Flash
 - Use the provided make target:
 ```sh
 make flash
 ```
 
-Project layout (key files)
+## Project layout (key files)
 - [makefile](makefile) — build and flash targets
 - [driver/i2c.c](driver/i2c.c), [driver/i2c.h](driver/i2c.h) — I2C driver
 - [example/main.c](example/main.c) — application entry and peripheral init
@@ -44,5 +44,10 @@ Project layout (key files)
 - [cmsis/*](cmsis/) — CMSIS core headers used by the project
 - [device/*.h](device/) — MCU register definitions
 
-License
+## Future Improvements
+
+- Add support for interrupts and DMA
+- Add support for target/slave mode
+
+## License
 - See [LICENSE](LICENSE) (Apache-2.0).

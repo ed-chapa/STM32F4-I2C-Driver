@@ -53,7 +53,6 @@ typedef struct {
     I2C_Duty duty;
     bool enableAck;
     uint16_t ownAddress;
-    uint32_t timeout;
 } I2C_Config;
 
 void I2C_EnableClock(I2C_TypeDef *i2c);
