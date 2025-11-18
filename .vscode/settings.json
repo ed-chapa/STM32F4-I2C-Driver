@@ -1,0 +1,10 @@
+{
+    "files.associations": {
+        "stdio.h": "c",
+        "string.h": "c",
+        "stdint.h": "c",
+        "gpio.h": "c",
+        "stm32f4xx.h": "c",
+        "ssd1306.h": "c"
+    }
+}
